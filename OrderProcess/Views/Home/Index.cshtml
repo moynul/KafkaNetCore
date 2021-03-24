@@ -1,0 +1,27 @@
+﻿@model List<Domain.OrderEntity>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Processed Order List</h1>
+    <table border="1">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">UserName</th>
+            <th scope="col">UserAddress</th>
+            <th scope="col">UserEmail</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.UserName</td>
+                <td>@item.UserAddress</td>
+                <td>@item.UserEmail</td>
+            </tr>
+        }
+
+    </table>
+</div>
